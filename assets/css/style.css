@@ -1,0 +1,596 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    background-color: #FAFDF2;
+    font-family: 'ur';
+}
+
+@font-face {
+    font-family: 'ur';
+    src: url(../media/font/Urbanist-Regular.ttf);
+}
+
+P{
+    background-color: transparent;
+}
+
+h2{
+    background-color: transparent;
+}
+/* Хеадер */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+    background-color: #1A3129;
+    margin-top: 20px;
+}
+
+.logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 200px;
+    background-color: #1a312900;
+}
+.logo img{
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0, 128, 0, 0);
+    margin-right: 10px;
+}
+.logo h2{
+    color: white;
+    font-size: 30px;
+}
+
+.menu{
+    display: flex;
+    gap: 3px;
+    background-color: transparent;
+}
+
+.menu__elem{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: transparent;
+}
+
+.menu__btn{
+    margin-left: 30px;
+   color: white;
+   font-size: 18px;
+   background-color: transparent;
+}
+
+.menu__btn.active{
+    color:#CBEA7B ;
+    background-color: transparent;
+}
+.submenu{
+    margin-left: 30px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding-top: 10px;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: .2s ease-in;
+    background-color: transparent;
+}
+.submenu.active{
+    opacity: 1;
+    visibility: visible;
+    background-color: transparent;
+}
+
+.submenu__wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    border: 1px solid #CBEA7B;
+    background-color: #CBEA7B;
+    height: 100px;
+    width: 64px;
+    border-radius: 5px;
+}
+
+.submenu__elem{
+    padding-top: 40px;
+    color: white;
+    align-items: center;
+    text-align: center;
+    background-color: transparent;
+}
+/* Хеадер закончился */
+
+/* Баннер/Слайдер */
+
+.slider {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.slider__body {
+    position: relative;
+    max-width: 1300px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.slider__arrow {
+    background-color: #F6FBE9;
+    border-radius: 10px;
+    border: 1px solid #EEF8D3;
+    padding: 20px;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 300px;
+    z-index: 100;
+    transform: translateY(-50%);
+}
+.left {
+    left: 500px;
+}
+.right {
+    right: 500px;
+}
+.slider__images {
+    display: flex;
+    transition: .3s ease-in;
+}
+.slider__item {
+    flex: 0 0 100%;
+    aspect-ratio: 16 / 4.5;
+    border: 3px solid #EEF8D3;
+    border-bottom: none;
+    border-radius: 10px;
+}
+.slider__item .sss{
+    height: 150px;
+    
+    display: flex;
+    flex-direction: row;
+}
+.slider__item .ss{
+    background-color: #FAFDF2;
+    width: 100px;
+    position: relative;
+    right: 20px;  
+}
+.slider__item .s{
+    background-color: #FAFDF2;
+    width: 100px;
+    position: relative;
+    left: 1120px; 
+}
+.slider__item h3{
+    font-size: 14px;
+    padding: 40px;
+}
+.slider__item h4{
+    font-size: 16px;
+}
+.slider__item .chel{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 30px;
+    background-color: #F6FBE9;
+    border-top: 3px solid #EEF8D3;
+    border-bottom: 3px solid #EEF8D3;
+}
+.slider__item img{
+    object-fit: cover;
+    width: 60px;
+    height: 60px;
+    margin-right: 40px;
+}
+
+.slider__nav {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 70px;
+}
+.slider__dot {
+    width: 10px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: #E5F5BD;
+    cursor: pointer;
+    transition: .3s ease-in;
+    margin-bottom: 100px;
+}
+.slider__dot.active{
+    width: 20px;
+    background-color: #356554;
+}
+
+button {
+    margin: 0 auto;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.btttn{
+   margin-left: 740px;
+   margin-top: 20px;
+}
+
+.zagolovv{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 120px;
+}
+
+.zagolovok{
+    font-size: 48px;
+    color: #262626;
+    margin-bottom: 20px;
+}
+
+.pozdzag{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+/* Баннер/Слайдер закончился */
+
+/* Вкладки */
+.catalog {
+    margin-top: 200px;
+    position: relative;
+    bottom: 150px;
+}
+.catalog h3{
+    font-size: 25px;
+    background-color: #F6FBE9;
+}
+.catalog h1{
+    text-align: center;
+}
+
+.txt{
+    text-align: center;
+    margin-top: 20px;
+    width: 1000px;
+    margin-left: 260px;
+}
+
+.second{
+    margin: 0px 10px
+}
+
+.catalog_btn {
+    margin-top: 80px;
+    display: flex;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--Green-80, #DCF1A7);
+    width: 273px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.sale{
+    margin-bottom: 10px;
+}
+
+.catalog_btn a {
+    display: flex;
+    padding: 8px 24px;
+    gap: 10px;
+    color: var(--Grey-30, #4C4C4C);
+    font-weight: 600;
+    border-radius: 6px;
+}
+
+.catalog_btn .active {
+    color: var(--Absolute-White, #FFF);
+    background: var(--Dark-Green-20, #234338);
+}
+
+.sale {
+    margin-top: 14px;
+    text-align: center;
+}
+
+.sale p {
+    color: var(--Grey-30, #4C4C4D);
+}
+
+.catalog_cards {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 30px;
+    width: 100%;
+}
+.fff{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.catalog_card {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 400px;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid var(--Green-90, #EEF8D3);
+    background: var(--Green-95, #F6FBE9);
+    background-color: #F6FBE9;
+}
+
+.catalog_sell {
+    color: var(--Grey-30, #4C4C4D);
+    background-color: #F6FBE9;
+}
+
+.catalog_card_text {
+    color: var(--Grey-15, #262626);
+}
+
+h3{
+    font-size: 30px;
+}
+.price p {
+    color: var(--Dark-Green-25, #2C5446);
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 87.523%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 4px;
+    background-color: #F6FBE9;
+}
+
+.btn {
+    display: flex;
+    padding: 18px 41px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 8px;
+    background: var(--Green-70, #CBEA7B);
+    color: #1A3129;
+}
+
+.slider {
+    position: relative;
+    max-width: 1200px;
+    z-index: 1;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    height: 100%;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.next {
+    right: 1px;
+}
+
+
+
+.tabs {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+
+  .tab__btn {
+    flex: 1;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    padding: 8px 24px;
+    gap: 10px;
+    color: var(--Grey-30, #4C4C4C);
+    font-weight: 600;
+    border-radius: 6px;
+  }
+  
+  .tab__btn:hover {
+    background-color: #e7e7e7;
+    transform: translateY(-2px);
+  }
+  
+  .tab__btn.active {
+    color: var(--Absolute-White, #FFF);
+    background: var(--Dark-Green-20, #234338);
+  }
+  
+  .tabs__items {
+    padding: 20px;
+  }
+  
+  .tab__text {
+    display: none; 
+    
+  }
+  
+  .tab__text.active {
+    display: block; 
+    opacity: 1;
+  }
+
+  .tab__text:not(.active) {
+    opacity: 0;
+  }
+/* Вкладки закончились */
+
+/* В-О */
+.faq{
+    gap: 10px;
+    width: 1320px;
+    margin: 100px;
+    background-color: #F6FBE9;
+    border: 3px solid #E5F5BD;
+    border-radius: 10px;
+    padding: 30px;
+}
+.faq .txt{
+    border-top: 3px solid #E5F5BD;
+    border-bottom: 3px solid #E5F5BD;
+    background-color: #F6FBE9;
+    padding: 30px;
+}
+.faq__item h3{
+    font-size: 20px;
+    font-weight: 500;
+    color: black;
+    transition: .2s ease-in;
+    margin-top: 20px;
+    background-color: #F6FBE9;
+}
+.faq__item p{
+    height: 0;
+    overflow: hidden;
+    color: black;
+    margin-top: 20px;
+    transition: .2s ease-in;
+    background-color: #F6FBE9;
+}
+.faq .img{
+    background-color: #F6FBE9;
+}
+.arrowdow{
+    width: 50px;
+    margin-top: 40px;
+    margin-right: 20px;
+}
+
+.faq__item{
+    display: flex;
+    margin-top: 30px;
+}
+/* В-О закончился */
+
+/* Телефон */
+.block {
+    height: 100%; 
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ccc;
+}
+.block img{
+    width: 400px;
+    height: 400px;
+    margin: 30px 0px;
+}
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 15px;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 270px; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 1200px;
+}
+.modal-content img{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+.modal-content p{
+    font-size: 20px;
+    color: #CBEA7B;
+}
+.modal-content span{
+    position: relative;
+    left: 20px;
+    font-weight: bold;
+    color: rgb(255, 77, 95);
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* Телефон закончился */
+
